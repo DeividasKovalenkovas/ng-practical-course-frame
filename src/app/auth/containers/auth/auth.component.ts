@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-auth',
@@ -8,8 +7,12 @@ import { AuthService } from '../../services/auth.service';
 })
 export class AuthComponent implements OnInit {
 
+  isActive: boolean;
+
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() { this.isActive = true; }
+
+  public toggle(): void { this.isActive = !this.isActive; }
 
 }

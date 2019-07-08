@@ -1,3 +1,8 @@
 <p>
   auth works!
 </p>
+
+<app-login *ngIf="isActive"></app-login>
+<app-sign-up *ngIf="!isActive"></app-sign-up>
+<button (click)="toggle()">Or Sign Up</button>
+

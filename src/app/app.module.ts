@@ -4,6 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './routing/app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {AuthModule} from './auth/auth.module';
+import {MockApiModule} from './mock-api/mock-api.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {MatFormFieldModule, MatInputModule} from '@angular/material';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -12,7 +17,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AuthModule,
+    MockApiModule,
+    FormsModule,
+    MatInputModule,
+    MatFormFieldModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
